@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS doormates;
-CREATE DATABASE doormates;
+DROP DATABASE IF EXISTS dormmates;
+CREATE DATABASE dormmates;
 
-USE doormates;
+USE dormmates;
 
 CREATE TABLE student (
   student_id INT NOT NULL AUTO_INCREMENT,
