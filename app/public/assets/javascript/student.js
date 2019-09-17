@@ -1,0 +1,1 @@
+// class for a student object
