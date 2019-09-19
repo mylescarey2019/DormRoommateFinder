@@ -24,7 +24,8 @@ Placeholders
 
 ```html
 https://loremflickr.com/320/240/student?random=3
-
+https://loremflickr.com/320/240/student,college?random=8
+https://loremflickr.com/320/240/college,student?random=8
 https://loremflickr.com/320/240/college,student?random=8
 
 http://lorempixel.com/320/240/people/?random=5

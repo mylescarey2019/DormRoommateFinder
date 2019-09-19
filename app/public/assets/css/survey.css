@@ -2,11 +2,54 @@ h1 {
   color: purple;
 }
 
+.jumbotron {
+  background-color: darkcyan;
+}
+
 .card {
   margin-left: 5%;
 }
 
 .answers {
-  height: 100px;
+  height: 140px;
   overflow: scroll;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.progress {
+  margin: 5px;
+}
+
+.progress-bar {
+  color: black;
+  font-weight: bold;
+  padding: 3px;
+  text-align: left;
+}
+
+.progress-bar-green {
+  background-color: #66b266;
+}
+
+.progress-bar-yellow {
+  background-color: #ffff66;
+}
+
+.progress-bar-red {
+  background-color: #ff6666;
+ }

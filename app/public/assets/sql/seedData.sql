@@ -99,3 +99,69 @@ UPDATE student
    SET photo = "https://loremflickr.com/320/240/student?random=1000"
    -- SET photo = 'http://lorempixel.com/320/240/people/'
  WHERE student_id = 12;
+
+
+
+
+USE dormmates;
+
+UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=1333"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 1;
+
+UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=55"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 2;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=100"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 3;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=200"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 4;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=300"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 5;
+
+UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=400"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 6;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=500"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 7;
+ 
+UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=600"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 8;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,unversity?random=700"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 9;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,university?random=800"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 10;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,college?random=900"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 11;
+ 
+ UPDATE student
+   SET photo = "https://loremflickr.com/320/240/student,university?random=1000"
+   -- SET photo = 'http://lorempixel.com/320/240/people/'
+ WHERE student_id = 12;
+
