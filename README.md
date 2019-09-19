@@ -19,3 +19,14 @@
     - [ ] insert user into students table
     - [ ] return in res the top 3 student matches
 - [ ] move on to building out the home and survey html and the home.js and survey.js
+
+Placeholders
+
+```html
+https://loremflickr.com/320/240/student?random=3
+
+https://loremflickr.com/320/240/college,student?random=8
+
+http://lorempixel.com/320/240/people/?random=5
+```
+

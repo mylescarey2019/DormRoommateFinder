@@ -1,0 +1,12 @@
+h1 {
+  color: purple;
+}
+
+.card {
+  margin-left: 5%;
+}
+
+.answers {
+  height: 100px;
+  overflow: scroll;
+}
