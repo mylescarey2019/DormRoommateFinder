@@ -14,11 +14,11 @@ class StudentPool {
 
   // initialize by creating array of words from the wordList parameter
  
-  findMatches(candidate) {
+  findMatches(matchUser) {
     // console.log('in StudentPool Class Object.findMatches');
 
-    // have to iterate over this studentPool and compute each student's compatiblity relative to candidate's answers
-    this.students.map(student => student.computeCompatibility(candidate.answers));
+    // have to iterate over this studentPool and compute each student's compatiblity relative to matchUser's answers
+    this.students.map(student => student.computeCompatibility(matchUser.answers));
    
     // compare helper function for sorting studentPool
     function compare(a, b) {
@@ -34,15 +34,15 @@ class StudentPool {
     // copy of students array
     var matchList = this.students;
 
-    // remove the candidate from the pool so they do not get matched with themselves
+    // remove the matchUser from the pool so they do not get matched with themselves
     var i = this.students.map((student,i) => {
-      // if(student.name.indexOf(candidate.name) === 0) {
-      if(student.name === candidate.name) {  
+      // if(student.name.indexOf(matchUser.name) === 0) {
+      if(student.name === matchUser.name) {  
         matchList.splice(i,1);
       }
     });
      
-    console.log(matchList);
+    // console.log(matchList);
  
     // sort the students in studentPool by compatibiltiy ascending because lowest score 
     // is the lowest difference in survey answers hence most compatible.

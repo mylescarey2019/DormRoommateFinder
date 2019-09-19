@@ -7,7 +7,7 @@ $("#post-student").on("click", function(event) {
 
   // Here we grab the form elements
   const students = [ 
-    {name: 'Myles', photo: 'no', answers: [1,2,3,4,5,5,4,3,2,1]}
+    {name: 'Myles', photo: 'nada', answers: [1,2,5,3,1,4,2,1,5,3]}
   ];
 
   console.log(`this is studentZero: ${students[0]}`);

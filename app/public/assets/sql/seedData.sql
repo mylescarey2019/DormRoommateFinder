@@ -1,17 +1,17 @@
 -- insert students
 INSERT INTO student (name,photo)
-VALUES('Logan Smith',null),
-      ('Isabella Garcia',null),
-      ('Evelyn Davis',null),
-      ('Sebastian Lopez',null),
-      ('Ella Anderson',null),
-      ('Jackson Miller',null),
-      ('Kyra Young',null),
-      ('Carter Scott',null),
-      ('Zoey Lee',null),
-      ('Asher Tran',null),
-      ('Leah Black',null),
-      ('Nathan Wright',null);
+VALUES('Logan Smith','http://lorempixel.com/320/240/people/'),
+      ('Isabella Garcia','http://lorempixel.com/320/240/people/'),
+      ('Evelyn Davis','http://lorempixel.com/320/240/people/'),
+      ('Sebastian Lopez','http://lorempixel.com/320/240/people/'),
+      ('Ella Anderson','http://lorempixel.com/320/240/people/'),
+      ('Jackson Miller','http://lorempixel.com/320/240/people/'),
+      ('Kyra Young','http://lorempixel.com/320/240/people/'),
+      ('Carter Scott','http://lorempixel.com/320/240/people/'),
+      ('Zoey Lee','http://lorempixel.com/320/240/people/'),
+      ('Asher Tran','http://lorempixel.com/320/240/people/'),
+      ('Leah Black','http://lorempixel.com/320/240/people/'),
+      ('Nathan Wright','http://lorempixel.com/320/240/people/');
       
 -- insert student answers
 INSERT INTO survey_answer (student_id,question_nbr,answer)
