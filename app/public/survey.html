@@ -19,8 +19,115 @@
       <h3>Match Survey</h3>
       <hr>
       <a href="/"><button class="btn btn-secondary btn-lg"><span class="fa fa-plus"></span>Home</button></a>
-      <button id="post-student" class="btn btn-secondary btn-lg"><span class="fa fa-plus"></span>Post</button>
+      <!-- <button id="start-survey" class="btn btn-secondary btn-lg"><span class="fa fa-plus"></span>Survey</button> -->
+      <button id="post-student" class="btn btn-secondary btn-lg"><span class="fa fa-plus"></span>Test-Post</button>
     </div>
+
+
+    <div id="survey-form" class="row">
+      <div class="col">
+          <form>
+              <div class="form-group">
+                <label for="name-input">Name</label>
+                <input type="text" class="form-control" id="user-name" placeholder="">
+                <label for="photo-input">Photo Link</label>
+                <input type="text" class="form-control" id="photo-path" placeholder="">
+              </div>
+              <div class="form-group">
+                <label class="question-label" id="survey-question-1" for="survey-question"></label>
+                <select class="form-control question" id="question1">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-2" for="survey-question"></label>
+                <select class="form-control question" id="question2">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-3" for="survey-question"></label>
+                <select class="form-control question" id="question3">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-4" for="survey-question"></label>
+                <select class="form-control question" id="question4">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-5" for="survey-question"></label>
+                <select class="form-control question" id="question5">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-6" for="survey-question"></label>
+                <select class="form-control question" id="question6">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>                
+                <label class="question-label" id="survey-question-7" for="survey-question"></label>
+                <select class="form-control question" id="question7">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-8" for="survey-question"></label>
+                <select class="form-control question" id="question8">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-9" for="survey-question"></label>
+                <select class="form-control question" id="question9">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>
+                <label class="question-label" id="survey-question-10" for="survey-question"></label>
+                <select class="form-control question" id="question10">
+                  <option>1 - Not Important</option>
+                  <option>2 - Slightly Important</option>
+                  <option>3 - Somewhat Important</option>
+                  <option>4 - Very Important</option>
+                  <option>5 - Extremely Important</option>
+                </select>                
+              </div>
+              <input id="submit" class="btn btn-primary" type="submit" value="Submit">
+            </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
     <div id="survey-results" class="row">
 
@@ -35,7 +142,9 @@
             <p id="name-1" class="card-text">Name Goes Here</p>
             <p id="compat-rating-1" class="card-text">Compatibility Rating: </p>
           </div>
+          <p class="survey-results-title">Survey Results</p>
           <div id="answers-1" class="answers">
+ 
               <!-- <ul id="answers-1">
                   <li>Cras justo odio</li>
                   <li>Dapibus ac facilisis in</li>
@@ -56,6 +165,7 @@
             <p id="name-2" class="card-text">Name Goes Here</p>
             <p id="compat-rating-2" class="card-text">Compatibility Rating: </p>
           </div>
+          <p class="survey-results-title">Survey Results</p>
           <div id="answers-2" class="answers">
             <!-- <table id="answers-2">
               <tr>
@@ -77,6 +187,7 @@
             <p id="name-3" class="card-text">Name Goes Here</p>
             <p id="compat-rating-3" class="card-text">Compatibility Rating: </p>
           </div>
+          <p class="survey-results-title">Survey Results</p>
           <div id="answers-3" class="answers">
 
                   <!-- <div class="progress">

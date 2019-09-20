@@ -2,7 +2,9 @@
 
 $(document).ready(function(){
 
+  $("#survey-form").show();
   $("#survey-results").hide();
+
 
 
   // question data
@@ -19,16 +21,61 @@ $(document).ready(function(){
    ,{title: "Share Meals", question: "How important is it that you share meals and food in your dormroom?"} 
   ];
 
+  // update survey form with questions
+  var i = 0;
+  $(".question-label").each(function () {
+    $(this).text(`${(i + 1)} - ${surveyQuestions[i].question}`);
+    i++
+  });
 
-    // Here we grab the form elements
-    const matchUser = {name: 'Myles', photo: 'nada', answers: [1,5,1,1,1,1,5,1,5,2]};
-    console.log(`this is studentZero: ${matchUser}`);
-    matchUserFirstName = matchUser.name.split(' ');
-    console.log(`match user's first name ${matchUserFirstName[0]}`);
+
+  //  hard coded user for testing backend while front survey not completed
+  const matchUser = {name: 'Myles', photo: 'nada', answers: [2,3,4,5,1,1,2,3,4,5]};
+  console.log(`this is studentZero: ${matchUser}`);
+  matchUserFirstName = matchUser.name.split(' ');
+  console.log(`match user's first name ${matchUserFirstName[0]}`);
 
 
-  $("#post-student").on("click", function(event) {
+
+  // $("#start-survey").on("click", function(event) {
+  //   event.preventDefault();
+  //   $("#survey-form").show();
+
+  // });
+
+
+  // // update survey form with questions
+  // var i = 0;
+  // $(".question-label").each(function () {
+  //   $(this).text(`${(i + 1)} - ${surveyQuestions[i].question}`);
+  //   i++
+  // });
+
+
+
+  $("#submit").on("click", function(event) {
+  // $("#post-student").on("click", function(event) {  
     event.preventDefault();
+
+    // validate form entries
+    console.log($("#user-name").val());
+    console.log($("#photo-link").val());
+    var i = 0;
+    $(".question").each(function () {
+      console.log(`question ${i} ${$(this).val()}`);
+      // console.log($(this).val());
+      i++
+    });
+
+    // *** next play it to validate to make 
+    // sure all fields are populated
+    // but before taht create a student class object for the
+    // input values and let pass into the post api
+
+
+    // ready to make post and get results
+    $("#survey-form").hide();
+
 
       // fill first match card
     function firstMatch(match) {
@@ -60,7 +107,7 @@ $(document).ready(function(){
             break;
         };
         var newBar = $(`<div class="progress"><div class="progress-bar ${barClass}" role="progressbar" style="width: ${barPct}%"
-                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title}</div></div>`);
+                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title} ${barPct}%</div></div>`);
         $("#answers-1").append(newBar);      
       })  
         // $("#answers-1").append($("<li>").text(`${surveyQuestions[i].title} ::: You: ${matchUser.answers[i]} / ${matchFirstName}: ${answer} `));
@@ -97,7 +144,7 @@ $(document).ready(function(){
             break;
         };
         var newBar = $(`<div class="progress"><div class="progress-bar ${barClass}" role="progressbar" style="width: ${barPct}%"
-                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title}</div></div>`);
+                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title} ${barPct}%</div></div>`);
         $("#answers-2").append(newBar);      
       })  
         // var newTr = $(`<tr><td> ${surveyQuestions[i].title} </td><td> ${matchUser.answers[i]} </td><td> ${answer} </td></tr>`)
@@ -132,7 +179,7 @@ $(document).ready(function(){
             break;
         };
         var newBar = $(`<div class="progress"><div class="progress-bar ${barClass}" role="progressbar" style="width: ${barPct}%"
-                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title}</div></div>`);
+                       aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title} ${barPct}%</div></div>`);
         $("#answers-3").append(newBar);      
       })  
     };
@@ -142,6 +189,8 @@ $(document).ready(function(){
       return (100 - compat * 2.5) + ' %';
     };
 
+    // post the match user to database
+    // get match results and diplay 
     $.post("/api/students", matchUser)
       .then(function(response) {
         console.log(response);

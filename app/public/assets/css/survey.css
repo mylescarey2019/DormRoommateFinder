@@ -6,8 +6,42 @@ h1 {
   background-color: darkcyan;
 }
 
+
+
+/* Survey */
+
+#survey-form {
+  height: 600px;
+  overflow: scroll;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.question-label {
+  margin-top: 10px;
+
+}
+
+
+
+/* Results */
 .card {
   margin-left: 5%;
+}
+
+.survey-results-title {
+  margin-bottom: 0px;
+  /* padding-left: 20px;  */
+  text-align: center;
 }
 
 .answers {
@@ -52,4 +86,9 @@ tr:nth-child(even) {
 
 .progress-bar-red {
   background-color: #ff6666;
+ }
+
+
+ footer {
+   margin-top: 10px;
  }
