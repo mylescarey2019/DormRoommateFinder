@@ -1,7 +1,8 @@
 /* home page CSS file */
 
 body {
-  background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash.jpg);
+  /* background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash.jpg); */
+  background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash\ copy\ 4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: center;
@@ -21,10 +22,11 @@ body {
 } */
 
 .jumbotron  {
-  background-color: rgba(0,63,135,.7);
+  background-color: rgba(0,63,135,.8);
   color: #ffffff;
   border: 2px solid #FFC61e;
   border-radius: 1rem;
+  padding: 32px;
 } 
 
 h1 {
@@ -50,3 +52,12 @@ h3, h4 {
   color: white;
 }
 
+footer {
+  background-color: rgba(0,63,135,.5);
+  color: white;
+}
+
+#footer-text {
+  display: block;
+  float: right;
+}

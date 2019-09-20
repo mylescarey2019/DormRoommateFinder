@@ -2,8 +2,8 @@
 
 $(document).ready(function(){
 
-  $("#sub-header").text("Welcome to the Dorm Roommate Match Survey");
-  $("#sub-header-2").text("Fill out the following survey and submit for a match");
+  $("#sub-header").text("Welcome to the Dorm Roommate Match Service");
+  $("#sub-header-2").text("Fill out the following 10 question survey and submit for a match");
   $("#survey-form").show();
   $("#survey-results").hide();
 
@@ -32,10 +32,10 @@ $(document).ready(function(){
 
 
   //  hard coded user for testing backend while front survey not completed
-  const matchUser = {name: 'Myles', photo: 'nada', answers: [2,3,4,5,1,1,2,3,4,5]};
-  console.log(`this is studentZero: ${matchUser}`);
-  matchUserFirstName = matchUser.name.split(' ');
-  console.log(`match user's first name ${matchUserFirstName[0]}`);
+  // const matchUser = {name: 'Myles', photo: 'nada', answers: [2,3,4,5,1,1,2,3,4,5]};
+  // console.log(`this is studentZero: ${matchUser}`);
+  // matchUserFirstName = matchUser.name.split(' ');
+  // console.log(`match user's first name ${matchUserFirstName[0]}`);
 
 
 
@@ -73,50 +73,50 @@ $(document).ready(function(){
     // console.log(`match user's first name ${matchUserFirstName[0]}`);
     
 
-    // ///**** 
-    // const matchUser = {name: '', photo: '', answers: []};
-    // var missingAnswers = false;
-    // console.log($("#user-name").val());
-    // console.log($("#photo-path").val());
-    // if ($("#user-name").val() === '') {
-    //   missingAnswers = true;
-    //   console.log("name-undef");
-    //   $("#user-name").addClass('no-answer');
-    // } else {
-    //   matchUser.name = $("#user-name").val();
-    // };
+    ///**** 
+    const matchUser = {name: '', photo: '', answers: []};
+    var missingAnswers = false;
+    console.log($("#user-name").val());
+    console.log($("#photo-path").val());
+    if ($("#user-name").val() === '') {
+      missingAnswers = true;
+      console.log("name-undef");
+      $("#user-name").addClass('no-answer');
+    } else {
+      matchUser.name = $("#user-name").val();
+    };
 
-    // // set photo
-    // if ($("#photo-path").val() === '') {
-    //   matchUser.photo = $("#photo-path").attr("placeholder");
-    // } else {
-    //   matchUser.name = $("#photo-path").val();
-    // };
+    // set photo
+    if ($("#photo-path").val() === '') {
+      matchUser.photo = $("#photo-path").attr("placeholder");
+    } else {
+      matchUser.name = $("#photo-path").val();
+    };
 
-    // // evaluate the survey question answers
-    // var i = 1;
-    // $(".question").each(function () {
-    //   console.log(`question ${i} ${$(this).val()}`);
-    //   if ($(this).val() === '') {
-    //     console.log('UNDEF');
-    //     missingAnswers = true;
-    //     $(this).addClass('no-answer');
-    //   } else {
-    //     console.log('NOT UNDEF')
-    //     matchUser.answers[i - 1] = $(this).val();
-    //   };
-    //   // console.log($(this).val());
-    //   i++
-    // });
+    // evaluate the survey question answers
+    var i = 1;
+    $(".question").each(function () {
+      console.log(`question ${i} ${$(this).val()}`);
+      if ($(this).val() === '') {
+        console.log('UNDEF');
+        missingAnswers = true;
+        $(this).addClass('no-answer');
+      } else {
+        console.log('NOT UNDEF')
+        matchUser.answers[i - 1] = $(this).val();
+      };
+      // console.log($(this).val());
+      i++
+    });
 
-    // console.log(`THE USER IS: ${JSON.stringify(matchUser)}`);
+    console.log(`THE USER IS: ${JSON.stringify(matchUser)}`);
 
-    // if (missingAnswers) {
-    //   $('#my-modal').modal('show');
-    //   return;
-    // };
+    if (missingAnswers) {
+      $('#my-modal').modal('show');
+      return;
+    };
 
-    // //**** 
+    //**** 
 
 
     // ready to make post and get results
