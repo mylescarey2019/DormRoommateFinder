@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+  $("#sub-header").text("Welcome to the Dorm Roommate Match Survey");
+  $("#sub-header-2").text("Fill out the following survey and submit for a match");
   $("#survey-form").show();
   $("#survey-results").hide();
 
@@ -18,7 +20,7 @@ $(document).ready(function(){
    ,{title: "Share Chores", question: "How important is it that you and your roommate share chores equally?"} 
    ,{title: "Entertainment", question: "How important is it for you to be able to play music, watch TV, party in your dormroom?"} 
    ,{title: "Study Partner", question: "How important is it for you to be able study with your dormmate?"} 
-   ,{title: "Share Meals", question: "How important is it that you share meals and food in your dormroom?"} 
+   ,{title: "Share Possessions", question: "How important is it that you and your roommate are open sharing things (food, electronics, media, etc.?"} 
   ];
 
   // update survey form with questions
@@ -57,20 +59,64 @@ $(document).ready(function(){
   // $("#post-student").on("click", function(event) {  
     event.preventDefault();
 
-    // validate form entries
-    console.log($("#user-name").val());
-    console.log($("#photo-link").val());
-    var i = 0;
-    $(".question").each(function () {
-      console.log(`question ${i} ${$(this).val()}`);
-      // console.log($(this).val());
-      i++
-    });
+    //remove missing answer warning color if form select made
+    $(".question,#user-name,#photo-path").change(function() {
+      $(this).removeClass("no-answer");
+    })
 
-    // *** next play it to validate to make 
-    // sure all fields are populated
-    // but before taht create a student class object for the
-    // input values and let pass into the post api
+    // validate form entries
+    // and
+    // create the match user's student profile and then
+    // call post api route to add them to the database and receive match results 
+    // console.log(`this is studentZero: ${matchUser}`);
+    // matchUserFirstName = matchUser.name.split(' ');
+    // console.log(`match user's first name ${matchUserFirstName[0]}`);
+    
+
+    // ///**** 
+    // const matchUser = {name: '', photo: '', answers: []};
+    // var missingAnswers = false;
+    // console.log($("#user-name").val());
+    // console.log($("#photo-path").val());
+    // if ($("#user-name").val() === '') {
+    //   missingAnswers = true;
+    //   console.log("name-undef");
+    //   $("#user-name").addClass('no-answer');
+    // } else {
+    //   matchUser.name = $("#user-name").val();
+    // };
+
+    // // set photo
+    // if ($("#photo-path").val() === '') {
+    //   matchUser.photo = $("#photo-path").attr("placeholder");
+    // } else {
+    //   matchUser.name = $("#photo-path").val();
+    // };
+
+    // // evaluate the survey question answers
+    // var i = 1;
+    // $(".question").each(function () {
+    //   console.log(`question ${i} ${$(this).val()}`);
+    //   if ($(this).val() === '') {
+    //     console.log('UNDEF');
+    //     missingAnswers = true;
+    //     $(this).addClass('no-answer');
+    //   } else {
+    //     console.log('NOT UNDEF')
+    //     matchUser.answers[i - 1] = $(this).val();
+    //   };
+    //   // console.log($(this).val());
+    //   i++
+    // });
+
+    // console.log(`THE USER IS: ${JSON.stringify(matchUser)}`);
+
+    // if (missingAnswers) {
+    //   $('#my-modal').modal('show');
+    //   return;
+    // };
+
+    // //**** 
 
 
     // ready to make post and get results
@@ -210,6 +256,8 @@ $(document).ready(function(){
               break;      
           }
         });
+        $("#sub-header").text("Dorm Roommate Match Survey Results");
+        $("#sub-header-2").text("Your three best matches based on survey comparison");
         $("#survey-results").show();
       });
   });

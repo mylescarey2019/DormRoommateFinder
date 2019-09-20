@@ -1,9 +1,52 @@
 /* home page CSS file */
 
-h1 {
-  color: purple;
+body {
+  background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: center;
+  width: 100%;
+  /* min-width: 320px;   */
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
 }
 
-.jumbotron {
-  background-color: darkcyan;
+/* .container { 
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+} */
+
+.jumbotron  {
+  background-color: rgba(0,63,135,.7);
+  color: #ffffff;
+  border: 2px solid #FFC61e;
+  border-radius: 1rem;
+} 
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: .15em;
 }
+
+h3, h4 {
+  text-align: center;
+  color: #bad80a;
+}
+
+#survey {
+  margin: 20px 0px 20px 0px;
+}
+
+.links {
+  margin: 30px 0px 0px 0px;
+}
+
+.links {
+  color: white;
+}
+
