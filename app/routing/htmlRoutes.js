@@ -13,6 +13,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, '../public/survey.html'))
   });
 
+  // home route
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+
   // catch all home route
   app.use(function(req, res){
     res.sendFile(path.join(__dirname, '../public/home.html'))
