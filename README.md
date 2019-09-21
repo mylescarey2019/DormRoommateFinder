@@ -36,7 +36,7 @@ This full stack web site simulates a college freshman dorm roommate matching ser
     - [x] another new student enter profile/survey with almost identical  answers to above student - gets matches include above student as best match
     - [x] display of database students in JSON format via /api/get route
 
-![dorm-demo](/Users/Myles/Bootcamp/WORK/DormRoommateFinder/app/public/assets/images/dorm-demo.gif)
+![dorm-demo](./app/public/assets/images/dorm-demo.gif)
 
 
 
@@ -56,7 +56,7 @@ Validation example
 
 Results page
 
-![results-img](/Users/Myles/Bootcamp/WORK/DormRoommateFinder/app/public/assets/images/results-img.png)
+![results-img](./app/public/assets/images/results-img.png)
 
 ## Getting Started
 
