@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   // question data
   surveyQuestions = [
-    {title: "Lights Out", question: "How important is it for your roommate to have simliar sleep schedules?"}
+    {title: "Sleep Schedule", question: "How important is it for your roommate to have simliar sleep schedules?"}
    ,{title: "Clean Room", question: "How important is it that your roommate keeps a clean room?"} 
    ,{title: "Friendship", question: "How important is it to have a freindship with your roommate?"} 
    ,{title: "Same Major", question: "How important is it that your roommate and you have the same major?"} 
@@ -20,7 +20,7 @@ $(document).ready(function(){
    ,{title: "Share Chores", question: "How important is it that you and your roommate share chores equally?"} 
    ,{title: "Entertainment", question: "How important is it for you to be able to play music, watch TV, party in your dormroom?"} 
    ,{title: "Study Partner", question: "How important is it for you to be able study with your roommate?"} 
-   ,{title: "Share Possessions", question: "How important is it that you and your roommate are open sharing things (food, electronics, media, etc.?"} 
+   ,{title: "Share Possessions", question: "How important is it that you and your roommate are open to sharing things (food, electronics, media, etc.?"} 
   ];
 
   // update survey form with questions
