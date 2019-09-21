@@ -68,7 +68,7 @@ Results page
 
 ### Dependencies
 
-- none 
+- none - Note:  responsive (but needs a few tweaks) - best viewed at or above 1400x1100
 
 ### Installing
 
@@ -84,6 +84,8 @@ Results page
 
 #### Possible Enhancements
 
+- [ ] clean up the accuracy of responsiveness 
+- [ ] change footer from fixed on viewport to fixed to content
 - [ ] more robust user profile with authentication
 - [ ] more complex and comprehensive survey and match algorithm
 
