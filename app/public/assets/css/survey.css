@@ -5,37 +5,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 
 body {
-  /* background-image: url(../images/naassom-azevedo-Q_Sei-TqSlc-unsplash\ copy\ 5.jpg); */
   background-image: url(../images/naassom-azevedo-Q_Sei-TqSlc-unsplash\ copy\ 6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: center;
   width: 100%;
-  /* min-width: 320px;   */
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
 }
 
-/* .container { 
-  width: 100%;
-  height: auto;
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 50%;
-  background-color: none;
-}
-
-h1 {
-  color: purple;
-}
-
-.jumbotron {
-  background-color: rgba(190,183,171,.7);
-}
-*/
 .jumbotron  {
   background-color: rgba(0,63,135,.8);
   color: #ffffff;
@@ -74,9 +54,6 @@ h3, h4 {
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 100px;
-  /* margin-bottom: 20px; */
-  /* margin-left: 30px;
-  margin-right: 30px; */
   background-color: rgba(102,140,183,.8);
   color: white;
   border: 2px solid #FFC61e;
@@ -112,15 +89,21 @@ label {
 
 /* Results */
 .card {
+  padding: 3px;
   margin-left: 5%;
   border: 2px solid #FFC61e;
   border-radius: 1rem;
   background-color:rgba(204,230,247,.8);
 }
 
+
+.card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .survey-results-title {
   margin-bottom: 0px;
-  /* padding-left: 20px;  */
   text-align: center;
 }
 
@@ -167,11 +150,6 @@ tr:nth-child(even) {
 .progress-bar-red {
   background-color: #ff6666;
  }
-
-
- /* footer {
-   margin-top: 10px;
- } */
 
  footer {
   background-color: rgba(0,63,135,.5);

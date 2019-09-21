@@ -11,15 +11,15 @@ $(document).ready(function(){
 
   // question data
   surveyQuestions = [
-    {title: "Lights Out", question: "How important is it for your dormmate to have simliar sleep schedule (i.e. both be morning persons or night-owls)?"}
-   ,{title: "Clean Room", question: "How important is it that your dormmate keeps a clean room?"} 
-   ,{title: "Friendship", question: "How important is it to have a freindship with your dormmate?"} 
-   ,{title: "Same Major", question: "How important is it that your dormmate and you have the same major?"} 
+    {title: "Lights Out", question: "How important is it for your roommate to have simliar sleep schedules?"}
+   ,{title: "Clean Room", question: "How important is it that your roommate keeps a clean room?"} 
+   ,{title: "Friendship", question: "How important is it to have a freindship with your roommate?"} 
+   ,{title: "Same Major", question: "How important is it that your roommate and you have the same major?"} 
    ,{title: "Solitude Needs", question: "How important is it for you to have times of solitude/privacy in your dormroom?"} 
    ,{title: "Guests", question: "How important is it for you to be able to have friends visit your room?"} 
    ,{title: "Share Chores", question: "How important is it that you and your roommate share chores equally?"} 
    ,{title: "Entertainment", question: "How important is it for you to be able to play music, watch TV, party in your dormroom?"} 
-   ,{title: "Study Partner", question: "How important is it for you to be able study with your dormmate?"} 
+   ,{title: "Study Partner", question: "How important is it for you to be able study with your roommate?"} 
    ,{title: "Share Possessions", question: "How important is it that you and your roommate are open sharing things (food, electronics, media, etc.?"} 
   ];
 
@@ -31,32 +31,7 @@ $(document).ready(function(){
   });
 
 
-  //  hard coded user for testing backend while front survey not completed
-  // const matchUser = {name: 'Myles', photo: 'nada', answers: [2,3,4,5,1,1,2,3,4,5]};
-  // console.log(`this is studentZero: ${matchUser}`);
-  // matchUserFirstName = matchUser.name.split(' ');
-  // console.log(`match user's first name ${matchUserFirstName[0]}`);
-
-
-
-  // $("#start-survey").on("click", function(event) {
-  //   event.preventDefault();
-  //   $("#survey-form").show();
-
-  // });
-
-
-  // // update survey form with questions
-  // var i = 0;
-  // $(".question-label").each(function () {
-  //   $(this).text(`${(i + 1)} - ${surveyQuestions[i].question}`);
-  //   i++
-  // });
-
-
-
   $("#submit").on("click", function(event) {
-  // $("#post-student").on("click", function(event) {  
     event.preventDefault();
 
     //remove missing answer warning color if form select made
@@ -64,16 +39,9 @@ $(document).ready(function(){
       $(this).removeClass("no-answer");
     })
 
-    // validate form entries
-    // and
+    // validate form entries and
     // create the match user's student profile and then
     // call post api route to add them to the database and receive match results 
-    // console.log(`this is studentZero: ${matchUser}`);
-    // matchUserFirstName = matchUser.name.split(' ');
-    // console.log(`match user's first name ${matchUserFirstName[0]}`);
-    
-
-    ///**** 
     const matchUser = {name: '', photo: '', answers: []};
     var missingAnswers = false;
     console.log($("#user-name").val());
@@ -105,7 +73,6 @@ $(document).ready(function(){
         console.log('NOT UNDEF')
         matchUser.answers[i - 1] = $(this).val();
       };
-      // console.log($(this).val());
       i++
     });
 
@@ -116,9 +83,7 @@ $(document).ready(function(){
       return;
     };
 
-    //**** 
-
-
+   
     // ready to make post and get results
     $("#survey-form").hide();
 
@@ -156,7 +121,6 @@ $(document).ready(function(){
                        aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title} ${barPct}%</div></div>`);
         $("#answers-1").append(newBar);      
       })  
-        // $("#answers-1").append($("<li>").text(`${surveyQuestions[i].title} ::: You: ${matchUser.answers[i]} / ${matchFirstName}: ${answer} `));
     };
 
     // fill second match card
@@ -167,7 +131,6 @@ $(document).ready(function(){
       $("#pic-2").attr('alt','no pic available');
       matchNameArr = match.name.split(' ');
       matchFirstName = matchNameArr[0];
-      // $("#match-answer-2").text(matchFirstName);
       match.answers.map((answer,i) => {
         var answerDiff = Math.abs(answer - matchUser.answers[i]);
         console.log(`you: ${matchUser.answers[i]} them: ${answer}`);
@@ -193,8 +156,6 @@ $(document).ready(function(){
                        aria-valuenow="${barPct}" aria-valuemin="0" aria-valuemax="100">${surveyQuestions[i].title} ${barPct}%</div></div>`);
         $("#answers-2").append(newBar);      
       })  
-        // var newTr = $(`<tr><td> ${surveyQuestions[i].title} </td><td> ${matchUser.answers[i]} </td><td> ${answer} </td></tr>`)
-        // $("#answers-2").append(newTr);
     };
 
     // fill third match card
@@ -261,6 +222,4 @@ $(document).ready(function(){
         $("#survey-results").show();
       });
   });
-
-
 });

@@ -3,7 +3,6 @@
 var { Student }  = require("./student.js");
 
 // class for student pool
-// takes a string of words and creates word pool object that manages those words
 class StudentPool {
   constructor(students) {
     // constructor
@@ -12,8 +11,6 @@ class StudentPool {
 
   //methods
 
-  // initialize by creating array of words from the wordList parameter
- 
   findMatches(matchUser) {
     // console.log('in StudentPool Class Object.findMatches');
 
@@ -35,15 +32,12 @@ class StudentPool {
     var matchList = this.students;
 
     // remove the matchUser from the pool so they do not get matched with themselves
-    var i = this.students.map((student,i) => {
-      // if(student.name.indexOf(matchUser.name) === 0) {
+    this.students.map((student,i) => {
       if(student.name === matchUser.name) {  
         matchList.splice(i,1);
       }
     });
      
-    // console.log(matchList);
- 
     // sort the students in studentPool by compatibiltiy ascending because lowest score 
     // is the lowest difference in survey answers hence most compatible.
     // this.students.sort(compare);

@@ -1,25 +1,16 @@
 /* home page CSS file */
 
 body {
-  /* background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash.jpg); */
   background-image: url(../images/master-of-shots-szmNG-xJ53A-unsplash\ copy\ 4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: center;
   width: 100%;
-  /* min-width: 320px;   */
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
 }
-
-/* .container { 
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: none;
-} */
 
 .jumbotron  {
   background-color: rgba(0,63,135,.8);
