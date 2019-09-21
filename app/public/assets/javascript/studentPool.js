@@ -38,7 +38,7 @@ class StudentPool {
     // console.log('lookhere', compArray, compArray.slice(0, 3).map(({index}) => this.students[index]));
 
 
-    
+
     // have to iterate over this studentPool and compute each student's compatiblity relative to matchUser's answers
     this.students.map(student => student.computeCompatibility(matchUser.answers));
    
@@ -59,6 +59,7 @@ class StudentPool {
     // remove the matchUser from the pool so they do not get matched with themselves
     this.students.map((student,i) => {
       if(student.name === matchUser.name) {  
+        
         matchList.splice(i,1);
       }
     });
