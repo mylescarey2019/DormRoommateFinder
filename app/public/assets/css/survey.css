@@ -79,6 +79,9 @@ label {
   background-color: #e08183;
 }
 
+form {
+  padding: 3px;
+}
 
 .custom {
   background-color: rgba(102,140,183,1);
