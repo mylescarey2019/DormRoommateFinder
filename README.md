@@ -33,7 +33,7 @@ This full stack web site simulates a college freshman dorm roommate matching ser
   - Use Cases seen in demo below
     - [x] new student enters profile/survey  (validation demonstrated) - gets matches from database
     - [x] new student re-enters profile/survey(changing answers) - gets new matches from database - does not get themselves as a match
-    - [x] another new student enter profile/survey with almost identical  answers to above student - gets matches include above student as best match
+    - [x] another new student enter profile/survey with almost identical  answers to above student - gets matches including above student as best match (assuming no other students have been added in the interium with identical answer sets)
     - [x] display of database students in JSON format via /api/get route
 
 ![dorm-demo](./app/public/assets/images/dorm-demo.gif)
@@ -103,4 +103,6 @@ mylescarey2019@gmail.com
 ## Acknowledgments
 
 Thanks to beta testers - my 15yo & 17yo daughters and wife 
+
+Thanks to photograph via unsplash photographers : Master of Shots & Naassom Azevedo
 

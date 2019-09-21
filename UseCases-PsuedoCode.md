@@ -27,7 +27,7 @@ This full stack application helps a college enrollee find a compatible dorm-mate
 
 1. Database model consists of student and survey_answer entities 
    - a student  has 0 to many survey_answer rows
-   - a survey_answer had 1 student
+   - a survey_answer has 1 student
    - data model is normalized
 
 2. Table Design
@@ -45,7 +45,7 @@ This full stack application helps a college enrollee find a compatible dorm-mate
 
    1. survey page loads
 
-2. user starts on homp page and clicks footer link to /api/student 
+2. user starts on home page and clicks footer link to /api/student 
 
    1. browser view is shown with formated JSON data for all students & their survey answer sets  
 
@@ -63,7 +63,7 @@ This full stack application helps a college enrollee find a compatible dorm-mate
 
    2. three matches show person's name, picture.  Also shown is a graphic for all 10 questions and the relationship between the user's answer and the answers of the matched person
 
-   3. the total compatibilty is displayed as a percentage of 100% scale - i.e. given there are 10 questions the algorith mis:  100 - (sum of 10 question differences * 2.5)   ex:  if sum of differences is 3 ==>  100 - (3 * 2.5) = 92.5%
+   3. the total compatibilty is displayed as a percentage of 100% scale - i.e. given there are 10 questions the algorithm is:  100 - (sum of 10 question differences * 2.5)   ex:  if sum of differences is 3 ==>  100 - (3 * 2.5) = 92.5%
 
    4. under each of the three matches there is a mini-display showing a bargraph for each of the 10 questions.
 

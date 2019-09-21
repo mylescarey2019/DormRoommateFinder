@@ -8,9 +8,9 @@ Functionality Cases
 
 1. new user navigates to survey page and fully fills out profile and answers all survey questions
    1. database results
-      1. new user so the profile name does not exist in database
+      1. new user,  so the profile name does not exist in database
       2. new student row is inserted to database
-      3. 10 new survey answer rows are insert to database with the new student row id as foreign key
+      3. 10 new survey answer rows are inserted to database with the new student row id as foreign key
    2. survey page results
       1. three cards are populated with the 3 matches found
       2. manually validate the 3 matches are the top three compatibility calculations versus the user's survey answer set
@@ -24,7 +24,7 @@ Functionality Cases
       2. existing student row is found and their existing survey answer rows are found and updated - new survey answer rows are NOT inserted
    2. survey page results
       1. since existing user change survey answers it is likely they will see a different set of 3 matches and/or different order of ranking
-      2. if user enters exact same survey answers expept exact same match results - unless other new users have been added to database since when user last completed the survey
+      2. if user enters exact same survey answers expect same match results - unless other new users have been added to database since when user last completed the survey
 
 3. user hits Submit but hasn't answered all survey questions
    1. expect modal pop up instructing user to finish survey
