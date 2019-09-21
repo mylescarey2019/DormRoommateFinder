@@ -58,7 +58,7 @@ $(document).ready(function(){
     if ($("#photo-path").val() === '') {
       matchUser.photo = $("#photo-path").attr("placeholder");
     } else {
-      matchUser.name = $("#photo-path").val();
+      matchUser.photo = $("#photo-path").val();
     };
 
     // evaluate the survey question answers
